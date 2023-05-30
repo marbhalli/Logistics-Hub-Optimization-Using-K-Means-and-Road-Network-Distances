@@ -6,6 +6,8 @@ n_iterations = 10
 
 cutoff = 10
 
-file_name = 'population_centroids_duel_weights_alpha_0.1'
+file_name = 'lahore_unique_lat_long'
 
-starting_centroids = [[8275352.13,3705453.333], [8276336.974,3698809.62],[8274113.367,3691933.585]]
+# for weighted algorithm, the "weight" column should be named "count"
+
+starting_centroids = [[8254436.98624443914741278,3683865.72284421091899276],[8292450.50245214160531759,3706972.12237172434106469],[8284948.2020614817738533,3681079.74333974765613675]]

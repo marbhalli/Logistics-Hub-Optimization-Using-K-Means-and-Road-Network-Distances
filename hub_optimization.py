@@ -42,7 +42,7 @@ def network_dist(centroids,n_iterations):
                     'FROM_ID_FIELD': 'field_1',
                     'TO_POINT_LAYER': f'delimitedtext://file:///Users/muhammadabdul/Desktop/Work/micro_hub_optimization/layer_files/to_point_layer_{n_iterations}.csv?type=csv&maxFields=10000&detectTypes=yes&xField=longitude&yField=latitude&crs=EPSG:3857&spatialIndex=no&subsetIndex=no&watchFile=no',
                     'TO_ID_FIELD': 'field_1', 'STRATEGY': 0, 'ENTRY_COST_CALCULATION_METHOD': 0,
-                    'DIRECTION_FIELD': 'direction', 'VALUE_FORWARD': '1', 'VALUE_BACKWARD': '2', 'VALUE_BOTH': '0',
+                    'DIRECTION_FIELD': 'direction', 'VALUE_FORWARD': '1', 'VALUE_BACKWARD': '1', 'VALUE_BOTH': '0',
                     'DEFAULT_DIRECTION': 2, 'SPEED_FIELD': '', 'DEFAULT_SPEED': 5, 'TOLERANCE': 0,
                     'OUTPUT': '/Users/muhammadabdul/Desktop/Work/micro_hub_optimization/layer_files/df_OD.csv'})
 
@@ -90,7 +90,7 @@ def network_dist_new_centroids(new_centroids,centroids):
                     'FROM_ID_FIELD': 'field_1',
                     'TO_POINT_LAYER': 'delimitedtext://file:///Users/muhammadabdul/Desktop/Work/micro_hub_optimization/layer_files/temp_df_new_centroids.csv?type=csv&maxFields=10000&detectTypes=yes&xField=longitude&yField=latitude&crs=EPSG:3857&spatialIndex=no&subsetIndex=no&watchFile=no',
                     'TO_ID_FIELD': 'field_1', 'STRATEGY': 0, 'ENTRY_COST_CALCULATION_METHOD': 0,
-                    'DIRECTION_FIELD': 'direction', 'VALUE_FORWARD': '1', 'VALUE_BACKWARD': '2', 'VALUE_BOTH': '0',
+                    'DIRECTION_FIELD': 'direction', 'VALUE_FORWARD': '1', 'VALUE_BACKWARD': '1', 'VALUE_BOTH': '0',
                     'DEFAULT_DIRECTION': 2, 'SPEED_FIELD': '', 'DEFAULT_SPEED': 5, 'TOLERANCE': 0,
                     'OUTPUT': '/Users/muhammadabdul/Desktop/Work/micro_hub_optimization/layer_files/df_OD_centroids_changes.csv'})
 
@@ -100,12 +100,6 @@ def network_dist_new_centroids(new_centroids,centroids):
 
     return df_OD['network_cost'].tolist()
 
-# def network_centroid_factory(data):
-#     """Create a centroid from a list of geo coordinates"""
-#     dim = len(data[0])
-#     n = len(data)
-#     sums = [sum((data[j][i] for j in range(n))) for i in range(dim)]
-#     return [float(s) / n for s in sums]
 
 def kmeans(centroids, distf, centroidf, cutoff, n_iterations,dist_centroidf):
     
