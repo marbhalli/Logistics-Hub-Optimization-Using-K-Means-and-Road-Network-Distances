@@ -96,7 +96,7 @@ def OD_matrix_possible_hubs():
 
     processing.run("qneat3:OdMatrixFromLayersAsTable", {'INPUT':'/Users/muhammadabdul/Desktop/Work/NTRC_Lahore-Road-Network/Lahore_District.shp','FROM_POINT_LAYER':'delimitedtext://file:///Users/muhammadabdul/Desktop/Work/micro_hub_optimization/layer_files/centroid_update/temp_neareast_vertices.csv?encoding=UTF-8&delimiter=,&xField=longitude&yField=latitude&crs=epsg:3857',
                                                         'FROM_ID_FIELD':'field_1','TO_POINT_LAYER':'delimitedtext://file:///Users/muhammadabdul/Desktop/Work/micro_hub_optimization/layer_files/centroid_update/temp_cluster.csv?encoding=UTF-8&delimiter=,&xField=longitude&yField=latitude&crs=epsg:3857',
-                                                        'TO_ID_FIELD':'field_1','STRATEGY':0,'ENTRY_COST_CALCULATION_METHOD':0,'DIRECTION_FIELD':'direction','VALUE_FORWARD':'1','VALUE_BACKWARD':'2',
+                                                        'TO_ID_FIELD':'field_1','STRATEGY':0,'ENTRY_COST_CALCULATION_METHOD':0,'DIRECTION_FIELD':'direction','VALUE_FORWARD':'1','VALUE_BACKWARD':'1',
                                                         'VALUE_BOTH':'0','DEFAULT_DIRECTION':2,'SPEED_FIELD':'','DEFAULT_SPEED':5,'TOLERANCE':0,'OUTPUT':'/Users/muhammadabdul/Desktop/Work/micro_hub_optimization/layer_files/centroid_update/temp_OD_possible_hubs.csv'})
 
 def centroid():
